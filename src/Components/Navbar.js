@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
+import International from '../pages/International';
 
 function Navbar() {
   return (
@@ -14,10 +16,10 @@ function Navbar() {
             <li className="nav-item"><a href="#">SCIENCE&TECH</a></li>
             <li className="nav-item"><a href="#">VIDEOS</a></li>
             <li className=" nav-item nav-dropdown">
-                <a href="#">GET INVOLVED</a>
+                <a href="#">GET INVOVED</a>
                 <ul className="dropdown-ul">
                     <li className="dropdown-items"><a href='#'>HealthCare</a></li>
-                    <li className="dropdown-items"><a href='#'>Education</a></li>
+                    <li className="dropdown-items"><a href='#'>Eduction</a></li>
                     <li className="dropdown-items"><a href='#'>Social Impact</a></li>
                     <li className="dropdown-items"><a href='#'>Empowerment</a></li>
                     <li className="dropdown-items"><a href='#'>Environment</a></li>
@@ -25,7 +27,7 @@ function Navbar() {
                     <li className="dropdown-items"><a href='#'>Autring's Blog</a></li>
                     <li className="dropdown-items"><a href='#'>Career</a></li>
                     <li className="dropdown-items"><a href='#'>Connect with us</a></li>
-                    <li className="dropdown-items"><a href='#'>Support for Journalism</a></li>
+                    <li className="dropdown-items"><a href='#'>support to Journalism</a></li>
                 </ul>
             </li>
             <li><a href="#" className='search_btn'><i className="fa-solid fa-magnifying-glass"></i></a></li>

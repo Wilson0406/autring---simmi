@@ -3,7 +3,7 @@ import React from 'react'
 function Section4_right() {
     return (
         <div className='section4-right-main'>
-            <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>On camera<div style={{ background: "red", display: "inline-block", width: "26rem", height: "3.5px",marginLeft:"7px", marginBottom:"3px" }}></div></h4>
+            <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>On camera<div style={{ background: "red", display: "inline-block", width: "26rem", height: "5px",marginLeft:"3px" }}></div></h4>
             <div className="row">
                 <div className="col-md-6">
                     <div className="card"  style={{maxWidth:"16rem", marginLeft:"3px"}}>

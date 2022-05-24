@@ -1,80 +1,90 @@
 import React from 'react'
 
-function Card() {
+function Card(props) {
+
+    const isText = (s) => {
+        if (s == null) return s;
+        else if (s.length >=75) return s.substring(0,61);
+        else return s;
+
+
+    }
     return (
         <>
-        
-    <div className='card-section2-main'>
-    <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Latest<div style={{ background: "red", display: "inline-block", width: "70rem  ", height: "3.5px",marginLeft:"3px", marginBottom:"3px" }}></div></h4>
-    <div className="row">
-      
-     <div className="col-md-3 ">
 
-<div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-       <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" alt="" className='img-fluid card-img-top imgs' />
-       <div className="card-body-section2 my-2">
-           <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Molestiae blanditii
-           </h6>
-           <p>author <span >    time</span></p>
-       </div>
-   </div>
+            <div className='card-section2-main'>
+                <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Latest<div style={{ background: "red", display: "inline-block", width: "62rem  ", height: "5px", marginLeft: "3px" }}></div></h4>
+                { props.data?(
+                <div className="row">
 
+                    <div className="col-md-3 ">
 
- </div>
+                        <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
+                            <img src={props.data[0].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <div className="card-body-section2 my-2">
+                                <h6>
+                                 {isText(props.data[0].title)}...
+                                </h6>
+                                <p>{props.data[0].author}<span > {props.data[0].publishedAt}</span></p>
+                            </div>
+                        </div>
 
 
- 
- <div className="col-md-3">
-
-<div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-       <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" alt="" className='img-fluid card-img-top' />
-       <div className="card-body-section2 my-2">
-           <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Molestiae blanditii
-           </h6>
-           <p>author <span >    time</span></p>
-       </div>
-   </div>
+                    </div>
 
 
- </div>
 
- 
- <div className="col-md-3">
+                    <div className="col-md-3">
 
-<div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-       <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" alt="" className='img-fluid card-img-top' />
-       <div className="card-body-section2 my-2">
-           <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Molestiae blanditii
-           </h6>
-           <p>author <span >    time</span></p>
-       </div>
-   </div>
+                        <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
+                            <img src={props.data[1].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <div className="card-body-section2 my-2">
+                                <h6>{isText(props.data[1].title)}...
+                                </h6>
+                                <p>{props.data[1].author} <span >{props.data[1].publishedAt}</span></p>
+                            </div>
+                        </div>
 
 
- </div>
-
- 
- <div className="col-md-3">
-
-<div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-       <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" alt="" className='img-fluid card-img-top' />
-       <div className="card-body-section2 my-2">
-           <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Molestiae blanditii
-           </h6>
-           <p>author <span >    time</span></p>
-       </div>
-   </div>
+                    </div>
 
 
- </div>
-      
-  
-    </div>
-  </div> 
+                    <div className="col-md-3">
+
+                        <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
+                            <img src={props.data[2].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <div className="card-body-section2 my-2">
+                                <h6>{
+                                    isText(props.data[2].title)
+                                }...
+                                </h6>
+                                <p>{props.data[2].author}<span > {props.data[2].publishedAt}</span></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div className="col-md-3">
+
+                        <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
+                            <img src={props.data[3].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <div className="card-body-section2 my-2">
+                                <h6>{isText(props.data[3].title)}...
+                                </h6>
+                                <p>{props.data[3].author} <span >{props.data[3].publishedAt}</span></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                ):(<></>)
+                }
+            </div>
 
         </>
     )
@@ -82,6 +92,6 @@ function Card() {
 
 
 
-  
+
 
 export default Card

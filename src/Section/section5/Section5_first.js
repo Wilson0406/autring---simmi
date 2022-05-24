@@ -1,74 +1,89 @@
 import React from 'react'
 
-function Section5_first() {
+function Section5_first(props) {
+    const isText = (s) => {
+        if (s == null) return s;
+        else if (s.length >= 80) return s.substring(0, 80);
+        else return s;
+
+
+    }
     return (
-        <div className='card-section5-main'>
-        <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Stories<div style={{ background: "red", display: "inline-block", width: "17rem", height: "3.5px",marginLeft:"3px", marginBottom:"3px" }}></div></h4>
-        <div className='my-1' style={{width:"20rem"}}>
-            <div className="row">
-                <div className="col-md-6">
-                <div className="card-section5-img">
-                    <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" className='img-fluid'  alt="" />
+        <> {
+            props.data ? (
+                <div className='card-section5-main'>
+                    <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Stories<div style={{ background: "red", display: "inline-block", width: "15rem", height: "5px", marginLeft: "3px" }}></div></h4>
+
+                    <div className='my-1' style={{ width: "20rem" }}>
+
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="card-section5-img">
+                                    <img src={props.data[0].urlToImage} className='img-fluid' style={{maxWidth:"9rem"}} alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="card-section5-text"> {isText(props.data[0].title)}</div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="col-md-6">
-                   <div className="card-section5-text">
-                   Lorem, ipsum dolor sit amet consectetur akvmdm nsdkmdks  consectetur akvmdm nsdkmdks 
-                   </div>
+
+                    <div className='my-1' style={{ width: "20rem" }}>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="card-section5-img">
+                                    <img src={props.data[1].urlToImage} className='img-fluid' style={{maxWidth:"9rem"}} alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="card-section5-text">
+                                    {isText(props.data[1].title)}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='my-1' style={{ width: "20rem" }}>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="card-section5-img">
+                                    <img src={props.data[2].urlToImage} className='img-fluid' style={{maxWidth:"9rem"}} alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="card-section5-text">
+                                    {isText(props.data[2].title)}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='my-1' style={{ width: "20rem" }}>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="card-section5-img">
+                                    <img src={props.data[3].urlToImage} className='img-fluid' style={{maxWidth:"9rem"}} alt="" />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="card-section5-text">
+                                    {isText(props.data[2].title)}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     
                 </div>
-            </div>
-        </div>
+            ) : (<></>)}
+        </>
 
-        <div className='my-1' style={{width:"20rem"}}>
-            <div className="row">
-                <div className="col-md-6">
-                <div className="card-section5-img">
-                    <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" className='img-fluid'  alt="" />
-                    </div>
-                </div>
-                <div className="col-md-6">
-                   <div className="card-section5-text">
-                   Lorem, ipsum dolor sit amet consectetur akvmdm nsdkmdks  consectetur akvmdm nsdkmdks 
-                   </div>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div className='my-1' style={{width:"20rem"}}>
-            <div className="row">
-                <div className="col-md-6">
-                <div className="card-section5-img">
-                    <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" className='img-fluid'  alt="" />
-                    </div>
-                </div>
-                <div className="col-md-6">
-                   <div className="card-section5-text">
-                   Lorem, ipsum dolor sit amet consectetur akvmdm nsdkmdks  consectetur akvmdm nsdkmdks 
-                   </div>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div className='my-1' style={{width:"20rem"}}>
-            <div className="row">
-                <div className="col-md-6">
-                <div className="card-section5-img">
-                    <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" className='img-fluid'  alt="" />
-                    </div>
-                </div>
-                <div className="col-md-6">
-                   <div className="card-section5-text">
-                   Lorem, ipsum dolor sit amet consectetur akvmdm nsdkmdks  consectetur akvmdm nsdkmdks 
-                   </div>
-                    
-                </div>
-            </div>
-        </div>
-
-        </div>
     )
 }
 

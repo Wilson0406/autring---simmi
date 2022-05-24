@@ -1,75 +1,82 @@
 import React from 'react'
 
-function SectionLeftCard() {
-    return (
+function SectionLeftCard(props) {
+    var st="The news media or news industry are forms of mass media that focus on delivering news to the general public or a target public."
 
-        <section className='top-heading'  style={{ marginTop:"2rem", paddingBottom:"2rem", paddingTop:"1rem" }} >
-            <h4 style={{ fontSize: "15px", marginLeft: "10px", display: "inline-block", fontWeight:"600" }}>Top Stories <div style={{ background: "red", display: "inline-block", width: "670px", height: "3.5px", marginBottom:"3px", marginLeft:"15px" }}></div></h4>
+    const isText=( s)=>{
+      if(s==null)return s;
+      else if(s.length>=95) return s.substring(0,95);
+      else return s;
+      
+
+    }
+    
+    const isDescription=( s)=>{
+        if(s==null){
+            return st;
+        }else if(s.length>=126) return s.substring(0,126);
+        else return s;
+     }
+    return (
+        
+        <section className='top-heading'  style={{
+
+        }} >
+            <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Top Stories <div style={{ background: "red", display: "inline-block", width: "600px", height: "5px" }}></div></h4>
+            {
+                     props.data?(
+                         <>
             <div className="row">
                 <div className="col-md-6">
-
+                 
                     <div className='card-left' style={{
-                        width: "23rem", height:"20rem", marginLeft: "10px"
+                        width: "22rem", height:"20rem", marginLeft: "8px"
                     }}>
-                        <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" className="card-img-top" alt="..." />
+                        <img src={props.data[0].urlToImage} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h6 className="card-title" style={{ fontWeight:"600", width:"24rem" }}>Major finantial scandle awaits Imran Khan? Follow Pakistan businessman Arif Naqvi's money</h6>
-                            <span ><i className="fa-solid fa-circle-user"></i><span className="logo-text"> Amit raj</span>
+                            <h6 className="card-title">{isText(props.data[0].title)}</h6>
+                            <span ><i className="fa-solid fa-circle-user"></i><span className="logo-text">{props.data[0].author}</span>
                             </span>
-                            <p className="card-text my-2">Some quick example text to build on the card title and make up
-                                to build on the card t  to build on the card t  to build</p>
+                            <p className="card-text my-2">{isDescription(props.data[0].description)}...</p>
                             
 
                         </div>
                     </div>
+                  
                 </div>
-
                 <div className="col-md-6">
 
                     <div className=" card-right">
                         <div className="card-body right-card">
-                            <p>Lorem ipsum dolor sit amet co!
-                                it amet co! it amet co! it amet co!
-                                co! it amet co!  it amet co!
-                            </p>
-                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text"> Amit raj</span></span>
+                            <p>{isText(props.data[1].title)}</p>
+                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{props.data[1].author}</span></span>
                         </div>
                     </div>
                     <div className=" my-2 card-right">
                         <div className="card-body right-card">
-                            <p>Lorem ipsum dolor sit amet co!
-                                it amet co! it amet co! it amet co!
-                                co! it amet co!  it amet co!
-                            </p>
-                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text"> Amit raj</span></span>
+                            <p>{isText(props.data[2].title)}</p>
+                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{props.data[2].author}</span></span>
                         </div>
                     </div>
                     <div className="my-2 card-right">
                         <div className="card-body right-card">
-                            <p>Lorem ipsum dolor sit amet co!
-                                it amet co! it amet co! it amet co!
-                                co! it amet co!  it amet co!
-                            </p>
-                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text"> Amit raj</span></span>
+                            <p>{isText(props.data[3].title)}</p>
+                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{props.data[3].author}</span></span>
                         </div>
                     </div>
                     <div className=" my-2 card-right">
                         <div className="card-body right-card">
-                            <p>Lorem ipsum dolor sit amet co!
-                                it amet co! it amet co! it amet co!
-                                co! it amet co!  it amet co!
+                            <p>{isText(props.data[4].title)}
                             </p>
-                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i><span className="logo-text"> Amit raj</span></span>
+                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i><span className="logo-text">{props.data[4].author}</span></span>
                         </div>
                     </div>
 
                     <div className="my-2 card-right">
                         <div className="card-body right-card">
-                            <p>Lorem ipsum dolor sit amet co!
-                                it amet co! it amet co! it amet co!
-                                co! it amet co!  it amet co!
+                            <p>{isText(props.data[5].title)}
                             </p>
-                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i><span className="logo-text"> Amit raj</span></span>
+                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i><span className="logo-text">{props.data[5].author}</span></span>
 
                         </div>
                     </div>
@@ -77,6 +84,8 @@ function SectionLeftCard() {
                 </div>
 
             </div>
+            </>  ):(<></>)
+                 }
 
         </section>
 

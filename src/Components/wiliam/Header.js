@@ -1,8 +1,5 @@
 import React from 'react'
 
-const date = new Date().toDateString();
-
-
 function Header() {
   return (
     <>  
@@ -19,7 +16,7 @@ function Header() {
                     
                 </ul>
                 <p id="date">
-                    {date}
+                    <script> document.querySelector('#date').innerHTML = new Date().toDateString(); </script>
                 </p>
             </div>
             <div className="logo__container">
