@@ -1,6 +1,15 @@
-import React from 'react'
+import React from 'react';
+import def from './def.jpg';
 
-function Card(props) {
+function Card(props) { 
+   
+  const  isCreator=(s)=>{
+        if(s==null) return "Unknown";
+        else{
+            return s[0];
+        }
+   }
+
 
     const isText = (s) => {
         if (s == null) return s;
@@ -12,20 +21,22 @@ function Card(props) {
     return (
         <>
 
-            <div className='card-section2-main'>
-                <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Latest<div style={{ background: "red", display: "inline-block", width: "62rem  ", height: "5px", marginLeft: "3px" }}></div></h4>
+            <div className='card-section2-main' 
+            // style={{minHeight:"4rem"}}
+            >
+                <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Latest<div style={{ background: "red", display: "inline-block", width: "70rem  ", height: "3.5px", marginLeft: "3px", marginBottom:"3px" }}></div></h4>
                 { props.data?(
                 <div className="row">
 
                     <div className="col-md-3 ">
 
                         <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-                            <img src={props.data[0].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <img src={props.data[0].image_url} onError={(e)=>{e.target.onerror = null; e.target.src={def}}} alt="" className='img-fluid card-img-top' />
                             <div className="card-body-section2 my-2">
                                 <h6>
                                  {isText(props.data[0].title)}...
                                 </h6>
-                                <p>{props.data[0].author}<span > {props.data[0].publishedAt}</span></p>
+                                <p>{isCreator(props.data[0].creator)}  <span >{props.data[0].pubDate}</span></p>
                             </div>
                         </div>
 
@@ -37,11 +48,11 @@ function Card(props) {
                     <div className="col-md-3">
 
                         <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-                            <img src={props.data[1].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <img src={props.data[1].image_url} onError={(e)=>{e.target.onerror = null; e.target.src={def}}} alt="" className='img-fluid card-img-top' />
                             <div className="card-body-section2 my-2">
                                 <h6>{isText(props.data[1].title)}...
                                 </h6>
-                                <p>{props.data[1].author} <span >{props.data[1].publishedAt}</span></p>
+                                <p>{isCreator(props.data[1].creator)}  <span >{props.data[1].pubDate}</span></p>
                             </div>
                         </div>
 
@@ -52,13 +63,13 @@ function Card(props) {
                     <div className="col-md-3">
 
                         <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-                            <img src={props.data[2].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <img src={props.data[2].image_url} onError={(e)=>{e.target.onerror = null; e.target.src={def}}} alt="" className='img-fluid card-img-top' />
                             <div className="card-body-section2 my-2">
                                 <h6>{
                                     isText(props.data[2].title)
                                 }...
                                 </h6>
-                                <p>{props.data[2].author}<span > {props.data[2].publishedAt}</span></p>
+                                <p>{isCreator(props.data[2].creator)}  <span >{props.data[2].pubDate}</span></p>
                             </div>
                         </div>
 
@@ -69,11 +80,11 @@ function Card(props) {
                     <div className="col-md-3">
 
                         <div className='card-section2 my-2' style={{ maxWidth: "17rem" }} >
-                            <img src={props.data[3].urlToImage} alt="" className='img-fluid card-img-top' />
+                            <img src={props.data[3].image_url} onError={(e)=>{e.target.onerror = null; e.target.src={def}}} alt="" className='img-fluid card-img-top' />
                             <div className="card-body-section2 my-2">
                                 <h6>{isText(props.data[3].title)}...
                                 </h6>
-                                <p>{props.data[3].author} <span >{props.data[3].publishedAt}</span></p>
+                                <p>{isCreator(props.data[3].creator)}  <span >{props.data[3].pubDate}</span></p>
                             </div>
                         </div>
 
@@ -94,4 +105,4 @@ function Card(props) {
 
 
 
-export default Card
+export default Card;

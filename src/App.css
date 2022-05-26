@@ -1,4 +1,6 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Faustina:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,300;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +14,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
-  line-height: 23px;
+  line-height: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,9 +27,13 @@
   justify-content: center;
   align-items: center;
   margin-left:-50px;
+}
 
-  
-  
+.navbar li{
+    margin-top: 0px;
+     margin-right: 33px;
+     padding: 0px 1px;
+     
 }
 .nav-item{
    margin-right: 33px;
@@ -55,16 +61,16 @@
   display: inline-block;
 }
 .dropdown-ul{
-  padding: 0;
-  width: 168px;
-  height: 362px;
+  padding: 10px;
+  width: auto;
+  height: auto;
   display: none;
   position: absolute;
   left: -30px;
-  top: 28px;
+  top: 24px;
   list-style: none;
   color: white;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.750);
   text-align: center;
   border-radius: 14px;
   font-family: "Faustina";
@@ -74,9 +80,14 @@
 }
 
 .dropdown-items {
-  margin: 10px;
+  font-family: "Faustina";
+  margin: 10px 25px;
+  /* padding: 25px; */
+  /* margin-left: 20px; */
   display: block;
-  
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-dropdown:hover .dropdown-ul{
@@ -85,10 +96,11 @@
 
 .dropdown-items a{
   color: white;
+  text-align: center;
 }
 
 .home-icon{
-  font-size: 25px;
+  font-size: 20px;
   color: red;
 }
 
@@ -103,8 +115,8 @@
 /* top-headding */
 
 .top-heading{
-   height: 470px;
-   width: 730px;
+   height: 480px;
+   width: 800px;
   
    box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
    
@@ -148,21 +160,26 @@
 
 .pov-card{
   box-shadow:3px -1px 10px -1px rgba(89, 84, 84, 0.3);
-  width: 280px;
-  height:300px;
-  /* min-height:7rem; */
-  /* border: 1px solid red; */
+  width: 300px;
+  height: 350px;
+  /* max-height: 375px; */
+  /* min-height: 340px; */
 }
 
-.pov-card-right-reader-editor{
+/* .pov-card-right {
+  min-height: 340px;
+} */
 
-  
+.top-card {
+  min-height: 340px;
+  height: 340px;
 }
+
 
 /* section 2 card */
 .card-section2{
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
 
 }
 
@@ -174,19 +191,21 @@
 
 }
 .card-body-section2{
-  width:230px;
-  margin-left: 3px;
+  width:250px;
+  margin-left: 5px;
   /* border:1px solid red; */
 }
 .card-body-section2 p{
   font-size: 12px;
 }
 
+
+
 .card-section2-main{
 
-  max-width:66rem;
+  max-width:74.1rem;
   height:300px;
-  margin-left: 20px;
+  margin-left: 28px;
   box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
 
 }
@@ -200,12 +219,13 @@
   
 }
 .card-section4-left-main{
-  
+  /* margin-left: -25px; */
   box-sizing: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
 }
 .card-section4-left-main h6{
      font-size: 13px;
      font-weight: 600;
+     margin: 2px 10px;
 }
 
 .section4-right-main{
@@ -216,15 +236,19 @@
 /* section5 */
 
 .card-section5-text{
+  margin: auto 2px;
+  padding: 0 4px;
   font-size: 11px;
   font-weight: 600;
 }
 .card-section5-img{
-  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-left: 8px;
 }
 
 .card-section5-main{
-  
-  width: 330px;
+  width: 340px;
+  height: 445px;
+  margin-bottom: 10px;
   box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
 }

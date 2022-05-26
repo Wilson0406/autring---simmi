@@ -1,25 +1,24 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import International from '../pages/International';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
   return (
     <div className="navbar">
         <ul className="nav-ul">
-            <li className="nav-item"><a href="#"><i className="fa-solid fa-house home-icon"></i></a></li>
-            <li className="nav-item"><a href="#">INDIA</a></li>
-            <li className="nav-item"><a href="#">INTERNATIONAL</a></li>
-            <li className="nav-item"><a href="#">POLITICAL</a></li>
-            <li className="nav-item"><a href="#">GOVERNANCE</a></li>
-            <li className="nav-item"><a href="#">ECONOMY</a></li>
-            <li className="nav-item"><a href="#">SPORTS</a></li>
-            <li className="nav-item"><a href="#">SCIENCE&TECH</a></li>
-            <li className="nav-item"><a href="#">VIDEOS</a></li>
+            <li className="nav-item"><Link className="nav-link" to="/"><i className="fa-solid fa-house home-icon"></i></Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/india">INDIA</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/international">INTERNATIONAL</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/political">POLITICAL</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/governance">GOVERNANCE</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/economy">ECONOMY</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/sports">SPORTS</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/science">SCIENCE&TECH</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/videos">VIDEOS</Link></li>
             <li className=" nav-item nav-dropdown">
                 <a href="#">GET INVOVED</a>
                 <ul className="dropdown-ul">
                     <li className="dropdown-items"><a href='#'>HealthCare</a></li>
-                    <li className="dropdown-items"><a href='#'>Eduction</a></li>
+                    <li className="dropdown-items"><a href='#'>Education</a></li>
                     <li className="dropdown-items"><a href='#'>Social Impact</a></li>
                     <li className="dropdown-items"><a href='#'>Empowerment</a></li>
                     <li className="dropdown-items"><a href='#'>Environment</a></li>
@@ -27,7 +26,7 @@ function Navbar() {
                     <li className="dropdown-items"><a href='#'>Autring's Blog</a></li>
                     <li className="dropdown-items"><a href='#'>Career</a></li>
                     <li className="dropdown-items"><a href='#'>Connect with us</a></li>
-                    <li className="dropdown-items"><a href='#'>support to Journalism</a></li>
+                    <li className="dropdown-items"><a href='#'>Support for Journalism</a></li>
                 </ul>
             </li>
             <li><a href="#" className='search_btn'><i className="fa-solid fa-magnifying-glass"></i></a></li>
@@ -37,4 +36,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;
